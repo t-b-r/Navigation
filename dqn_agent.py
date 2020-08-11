@@ -43,11 +43,6 @@ class Agent():
         # Initialize time step (for updating every UPDATE_EVERY steps)
         self.t_step = 0
 
-        #debugging
-        print(state_size)
-        print(action_size)
-        print(seed)
-
     def step(self, state, action, reward, next_state, done):
         # Save experience in replay memory
         self.memory.add(state, action, reward, next_state, done)
@@ -107,9 +102,6 @@ class Agent():
         # Minimize the loss
         self.optimizer.zero_grad()
         loss.backward()
-        self.optimizer.step()
-
-
         # ------------------- update target network ------------------- #
         self.soft_update(self.qnetwork_local, self.qnetwork_target, TAU)
 
