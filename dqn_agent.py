@@ -95,8 +95,7 @@ class Agent():
 
 
         # get max predicted Q values (for next states) from target model
-        Q_targets_next = self.qnetowrk_target(next_states).detach().max(1)[0].unsqueeze(1)
-
+        Q_targets_next = self.qnetwork_target(next_states).detach().max(1)[0].unsqueeze(1)
         # compute Q targets for current states
         Q_targets = rewards + (gamma*Q_targets_next*(1-dones))
 
@@ -108,7 +107,7 @@ class Agent():
         # Minimize the loss
         self.optimizer.zero_grad()
         loss.backward()
-        self.optimzer.step()
+        self.optimizer.step()
 
 
         # ------------------- update target network ------------------- #
