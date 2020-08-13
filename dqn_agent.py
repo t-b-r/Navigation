@@ -99,6 +99,7 @@ class Agent():
         # Minimize the loss
         self.optimizer.zero_grad()
         loss.backward()
+        self.optimizer.step()
         # ------------------- update target network ------------------- #
         self.soft_update(self.qnetwork_local, self.qnetwork_target, TAU)
 
