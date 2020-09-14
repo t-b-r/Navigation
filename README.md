@@ -43,3 +43,4 @@ The task is episodic, and in order to solve the environment, your agent must get
 - **Navigation.ipynb**: Contains the code to run the agent in the environment
 - **dqn_agent.py**: Code for the agent
 - **dqn_model.py**: Code defining the deep Q Network 
+- **checkpoint.pth**: Pytorch model weights
