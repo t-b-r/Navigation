@@ -1,16 +1,9 @@
-[//]: # (Image References)
-
-[image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Trained Agent"
-
 # Project 1: Navigation
 
-### Project Instructions and Overview
+### Overview
 
-For this project, you will train an agent to navigate (and collect bananas!) in a large, square world.  
 
-![Trained Agent][image1]
-
-A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.  Thus, the goal of your agent is to collect as many yellow bananas as possible while avoiding blue bananas.  
+In this project, we implement a deep q network to train an agent to learn how to navigate OpenAI Gym's Banana environment. In this episodic environment, the objective is to collect as many yellow bananas as possible while avoiding blue bananas. The agent is capable of moving forwards, backwards, left, or right, and perceives the environment via a 37-dimensional ray-based vector around the agent's forward direction. Each episode terminates after 1,000 time steps have been traversed, and we consider the agent to have learned the environment when it is able to achieve a score of +13.
 
 The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around agent's forward direction.  Given this information, the agent has to learn how to best select actions.  Four discrete actions are available, corresponding to:
 - **`0`** - move forward.
@@ -18,7 +11,6 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 - **`2`** - turn left.
 - **`3`** - turn right.
 
-The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
 
 ### Instructions
 
